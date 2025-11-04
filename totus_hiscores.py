@@ -16,7 +16,7 @@ rank_conversion_dict = {
     '1️⃣': "Recruit",
     }
 
-BLACK = (0,0,0,0)
+BLACK = (0,0,0,255)
 # Number of pixels that are padded
 PADDING = 18
 HEADING_PADDING = 5
