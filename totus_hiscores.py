@@ -1,3 +1,7 @@
+'''
+A method for converting the stuff from Totus discord channel "highscores" to a image similar to 
+the oldschool.runescape.com website hiscores.
+'''
 from PIL import Image, ImageDraw, ImageFont
 import re
 
@@ -103,6 +107,8 @@ y += PADDING + HEADING_PADDING
 # Iterate through the rows and draw the relavent data on the image.
 i = 0
 for row in dg:
+    # With more than 25 entries, there will be too much text.
+    # also 25 is the limit on the OSRS website.
     if i > 25:
         break
     leader_board_rank = row[0]
@@ -120,5 +126,5 @@ for row in dg:
 
     i += 1
 
-image.show()
-#image.save("totus_hiscore_image.png")
+#image.show()
+image.save("totus_hiscore_image.png")
